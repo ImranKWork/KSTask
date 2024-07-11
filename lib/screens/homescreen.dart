@@ -111,8 +111,6 @@ class _MyHomePageState extends State<MyHomePage> {
                           _current = index;
                         });
                       },
-
-                      // autoPlay: false,
                     ),
                     items: [
                       "assets/bn1.png",
@@ -121,11 +119,11 @@ class _MyHomePageState extends State<MyHomePage> {
                     ].map((i) {
                       return Builder(
                         builder: (BuildContext context) {
-                          return Expanded(
-                              child: Image.asset(
+                          return Image.asset(
                             i,
+                            width: MediaQuery.of(context).size.width,
                             fit: BoxFit.cover,
-                          ));
+                          );
                         },
                       );
                     }).toList(),
